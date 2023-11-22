@@ -1,6 +1,12 @@
 #include "Product.h"
 
 Product::Product(){}
+Product::Product(const Product& another) {
+	this->name = another.name;
+	this->price = another.price;
+	this->productID = another.productID;
+	this->quantityInStock = another.quantityInStock;
+}
 Product::Product(string name, double price, int quantityInStock) : productID(s_id++), name(name), price(price), quantityInStock(quantityInStock) {}
 
 int Product::getProductId() const {

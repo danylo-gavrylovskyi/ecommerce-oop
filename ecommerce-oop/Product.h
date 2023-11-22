@@ -22,8 +22,9 @@ class Product : public IProduct {
 	double price;
 	int quantityInStock;
 public:
+	Product();
 	Product(string name, double price, int quantityInStock);
-	Product(const Product&) = delete;
+	Product(const Product&);
 	Product(Product&&) = delete;
 
 	int getProductId() const override;
