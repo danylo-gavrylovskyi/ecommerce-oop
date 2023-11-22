@@ -1,5 +1,6 @@
 #include "Product.h"
 
+Product::Product(){}
 Product::Product(string name, double price, int quantityInStock) : productID(s_id++), name(name), price(price), quantityInStock(quantityInStock) {}
 
 int Product::getProductId() const {
