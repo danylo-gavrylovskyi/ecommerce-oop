@@ -17,6 +17,7 @@ public:
 	Order(const vector<Product*> products, const string& customer, const double& totalCost, const string& orderStatus);
 	Order(const Order&) = delete;
 	Order(Order&&) = delete;
+	~Order();
 
 	void addProduct(Product* product);
 	double calculateTotalCost() const;

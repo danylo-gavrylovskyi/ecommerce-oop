@@ -14,6 +14,12 @@ Order::Order(const vector<Product*> products, const string& customer, const doub
 	this->orderStatus = orderStatus;
 }
 
+Order::~Order() {
+	for (const auto& product : this->products) {
+		delete product;
+	}
+}
+
 void Order::addProduct(Product* product) {
 	this->products.push_back(product);
 }
