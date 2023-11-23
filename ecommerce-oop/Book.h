@@ -5,13 +5,15 @@
 class Book : public Product {
 	string author;
 	string genre;
-	int ISBN;
+	string ISBN;
 public:
-	Book(string author, string genre, int ISBN);
+	Book(string author, string genre, string ISBN, string name, double price);
 	Book(const Book&) = delete;
 	Book(Book&&) = delete;
 
 	string getAutor() const;
 	string getGenre() const;
-	int getISBN() const;
+	string getISBN() const;
+
+	void displayDetails() const override;
 };

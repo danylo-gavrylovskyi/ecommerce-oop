@@ -1,6 +1,9 @@
 #include "Book.h"
 
-Book::Book(string author, string genre, int ISBN): author(author), genre(genre), ISBN(ISBN) {}
+Book::Book(string author, string genre, string ISBN, string name, double price): author(author), genre(genre), ISBN(ISBN) {
+	this->name = name;
+	this->price = price;
+}
 
 string Book::getAutor() const {
 	return this->author;
@@ -8,6 +11,10 @@ string Book::getAutor() const {
 string Book::getGenre() const {
 	return this->genre;
 }
-int Book::getISBN() const {
+string Book::getISBN() const {
 	return this->ISBN;
+}
+
+void Book::displayDetails() const {
+	cout << "Book, " << this->productID << ", " << this->name << ", " << this->price << ", " << this->author << ", " << this->genre << ", " << this->ISBN << endl;
 }
