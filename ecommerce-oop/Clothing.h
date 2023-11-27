@@ -7,7 +7,7 @@ class Clothing: public Product {
 	string color;
 	string material;
 public:
-	Clothing(string size, string color, string material, string name, double price);
+	Clothing(string name, double price, int quantityInStock, string size, string color, string material);
 	Clothing(const Clothing&) = delete;
 	Clothing(Clothing&&) = delete;
 

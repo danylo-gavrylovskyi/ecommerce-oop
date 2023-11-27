@@ -7,7 +7,7 @@ class Electronics : public Product {
 	string model;
 	string powerConsumption;
 public:
-	Electronics(string brand, string model, string powerConsumption, string name, double price);
+	Electronics(string name, double price, int quantityInStock, string brand, string model, string powerConsumption);
 	Electronics(const Electronics&) = delete;
 	Electronics(Electronics&&) = delete;
 

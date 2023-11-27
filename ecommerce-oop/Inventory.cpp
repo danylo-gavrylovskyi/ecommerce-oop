@@ -1,11 +1,21 @@
 #include <iostream>
 #include "Inventory.h"
 
-Inventory::Inventory(const vector<Product*>& products): products(products) {}
+Inventory::Inventory(){}
 
 Inventory::~Inventory() {
     for (const auto& product : this->products) {
         delete product;
+    }
+}
+
+void Inventory::addProduct(Product* product) {
+    this->products.push_back(product);
+}
+
+void Inventory::displayProducts() const {
+    for (const auto& product : this->products) {
+        product->displayDetails();
     }
 }
 

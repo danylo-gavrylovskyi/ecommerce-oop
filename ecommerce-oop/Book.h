@@ -7,7 +7,7 @@ class Book : public Product {
 	string genre;
 	string ISBN;
 public:
-	Book(string author, string genre, string ISBN, string name, double price);
+	Book(string name, double price, int quantityInStock, string author, string genre, string ISBN);
 	Book(const Book&) = delete;
 	Book(Book&&) = delete;
 
