@@ -15,5 +15,9 @@ public:
 	string getColor() const;
 	string getMaterial() const;
 
+	void setSize(string size);
+	void setColor(string color);
+	void setMaterial(string material);
+
 	void displayDetails() const override;
 };

@@ -15,5 +15,9 @@ public:
 	string getGenre() const;
 	string getISBN() const;
 
+	void setAutor(string author);
+	void setGenre(string genre);
+	void setISBN(string ISBN);
+
 	void displayDetails() const override;
 };

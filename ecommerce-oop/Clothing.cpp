@@ -16,6 +16,16 @@ string Clothing::getMaterial() const {
 	return this->material;
 }
 
+void Clothing::setSize(string size) {
+	this->size = size;
+}
+void Clothing::setColor(string color) {
+	this->color = color;
+}
+void Clothing::setMaterial(string material) {
+	this->material = material;
+}
+
 void Clothing::displayDetails() const {
 	cout << "Clothing, " << this->productID << "," << this->name << ", " << this->price << "," << this->size << "," << this->color << "," << this->material << endl;
 }

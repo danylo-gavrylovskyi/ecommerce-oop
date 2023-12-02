@@ -11,9 +11,15 @@ public:
 	Electronics(const Electronics&) = delete;
 	Electronics(Electronics&&) = delete;
 
+	void operator = (Electronics&&);
+
 	string getBrand() const;
 	string getModel() const;
 	string getPowerConsumption() const;
+
+	void setBrand(string brand);
+	void setModel(string model);
+	void setPowerConsumption(string powerConsumption);
 
 	void displayDetails() const override;
 };

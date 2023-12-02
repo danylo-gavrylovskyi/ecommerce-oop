@@ -16,6 +16,16 @@ string Book::getISBN() const {
 	return this->ISBN;
 }
 
+void Book::setAutor(string author) {
+	this->author = author;
+}
+void Book::setGenre(string genre) {
+	this->genre = genre;
+}
+void Book::setISBN(string ISBN) {
+	this->ISBN = ISBN;
+}
+
 void Book::displayDetails() const {
 	cout << "Book, " << this->productID << "," << this->name << ", " << this->price << "," << this->author << "," << this->genre << "," << this->ISBN << endl;
 }
