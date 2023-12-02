@@ -23,6 +23,7 @@ public:
 	void updateProductDetails(const int& productId);
 	void removeProduct(const int& productId);
 	void displayProducts() const;
+	void filterByCategory(const int& category) const;
 
 	void changeProductQuantity(const int& productId, const int& newQuantity);
 	void showRestockList() const;

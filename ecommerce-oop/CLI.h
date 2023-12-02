@@ -11,6 +11,7 @@ class ICLI {
 
 class CLI : public ICLI {
 	void addProductToInventory(Inventory& inventory) const;
+	void viewAllProducts(const Inventory& inventory) const;
 public:
 	void run(Inventory& inventory, vector<Order>& orders, Order& currentOrder) override;
 };

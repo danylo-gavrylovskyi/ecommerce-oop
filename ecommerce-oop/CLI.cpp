@@ -27,7 +27,7 @@ void CLI::run(Inventory& inventory, vector<Order>& orders, Order& currentOrder) 
 		switch (choice)
 		{
 		case 1: {
-			inventory.displayProducts();
+			viewAllProducts(inventory);
 			break;
 		}
 		case 2: {
@@ -170,4 +170,17 @@ void CLI::addProductToInventory(Inventory& inventory) const {
 	else {
 		cout << "Such category is not implemented yet.";
 	}
+}
+
+void CLI::viewAllProducts(const Inventory& inventory) const {
+	int choice;
+	cout << "Do you want to apply filter ?\n\t1. Yes\n\t2. No\n>> ";
+	cin >> choice;
+
+	if (choice == 2) { inventory.displayProducts(); return; }
+
+	cout << "Choose category:\n\t1. Electronics\n\t2. Clothing\n\t3. Books\n>> ";
+	cin >> choice;
+
+	inventory.filterByCategory(choice);
 }

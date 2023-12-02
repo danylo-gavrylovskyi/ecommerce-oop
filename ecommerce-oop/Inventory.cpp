@@ -60,6 +60,39 @@ void Inventory::displayProducts() const {
     }
 }
 
+enum Category {
+    ELECTRONICS = 1,
+    CLOTHING = 2,
+    BOOKS = 3
+};
+
+void Inventory::filterByCategory(const int& category) const {
+    for (const auto& product : this->products) {
+        Electronics* electronicsProduct = dynamic_cast<Electronics*>(product);
+        Clothing* clothingProduct = dynamic_cast<Clothing*>(product);
+        Book* bookProduct = dynamic_cast<Book*>(product);
+
+        if (category == ELECTRONICS) {
+            if (electronicsProduct) {
+                cout << product->getQuantityInStock() << " left in stock -> ";
+                product->displayDetails();
+            }
+        }
+        else if (category == CLOTHING) {
+            if (clothingProduct) {
+                cout << product->getQuantityInStock() << " left in stock -> ";
+                product->displayDetails();
+            }
+        }
+        else if (category == BOOKS) {
+            if (bookProduct) {
+                cout << product->getQuantityInStock() << " left in stock -> ";
+                product->displayDetails();
+            }
+        }
+    }
+}
+
 void Inventory::changeProductQuantity(const int& productId, const int& newQuantity) {
     auto it = find_if(this->products.begin(), this->products.end(), [productId](const Product* product) {return product->getProductId() == productId; });
 
